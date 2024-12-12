@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Reputation Rankings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        .form-container {
+            margin-top: 2rem;
+        }
+        form {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        form input {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-button {
+            padding: 0.5rem 1rem;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Professor Reputation Rankings</h1>
+    </header>
+    <div class="container">
+        <p>
+            Discover the universities with the most highly-regarded professors, ranked based on reviews from current and past students. Our platform helps you make an informed decision about your academic future.
+        </p>
+        <a href="/universities" class="cta-button">Explore Universities</a>
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <form action="/signup" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="form-button">Sign Up</button>
+            </form>
+
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit" class="form-button">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
